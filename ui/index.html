@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMDOCPY by.Kris Muliawan</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 30px 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        input[type="text"],
+        textarea {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+            width: 100%;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .note {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pengajuan biaya akomodasi</h1>
+        <br>
+        <form method="POST" action="/">
+
+        <label for="asuransi">Pilih Jenis Asuransi</label>
+            <select name="asuransi" id="asuransi" required>
+                <option value="">-- Pilih Asuransi --</option>
+                <option value="TOB">Asuransi Total Bersama</option>
+                <option value="SOMPO">Asuransi SOMPO</option>
+                <option value="ACA">Asuransi Central Asia</option>
+            </select>
+
+            <label for="nomor_surat">Nomor Surat Kuasa / Surat Tugas Klaim Asuransi:</label>
+            <input type="text" id="nomor_surat" name="nomor_surat" required>
+
+            <label for="nomor_polis">Nomor Polis:</label>
+            <input type="text" id="nomor_polis" name="nomor_polis" required>
+
+            <label for="nama_tertanggung">Nama Tertanggung:</label>
+            <input type="text" id="nama_tertanggung" name="nama_tertanggung" required>
+
+            <label for="unit">Nomor Polisi / Merk Mobil / Tahun:</label>
+            <input type="text" id="unit" name="unit" required>
+
+            <label for="tkp">Alamat TKP:</label>
+            <input type="text" id="tkp" name="tkp" required>
+
+            <label for="alamat_tertanggung">Alamat Tertanggung:</label>
+            <textarea id="alamat_tertanggung" name="alamat_tertanggung" rows="2"></textarea>
+
+            <label for="alamat_sopir">Alamat Sopir:</label>
+            <textarea id="alamat_sopir" name="alamat_sopir" rows="2"></textarea>
+
+            <label for="alamat_bengkel">Alamat Bengkel:</label>
+            <textarea id="alamat_bengkel" name="alamat_bengkel" rows="2"></textarea>
+
+            <label for="alamat_polisi">Kantor Polisi:</label>
+            <input type="text" id="kantor_polisi" name="kantor_polisi" required>
+
+            <label for="dol">DOL (Date of Loss):</label>
+            <input type="text" id="dol" name="dol" placeholder="contoh: 17 Mei 2007" required>
+
+            <button type="submit">Generate Dokumen</button>
+        </form>
+        <div class="note">
+            <p>Setelah menekan tombol "Generate Dokumen", file Word akan otomatis diunduh.</p>
+        </div>
+    </div>
+</body>
+</html>
