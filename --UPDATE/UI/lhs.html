@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Karya Solusi Cemerlang System</title>
+<style>
+  body{font-family:Segoe UI,Roboto,Arial; background:#f5f7fa; margin:0; padding:20px}
+  .card{max-width:900px;margin:20px auto;background:#fff;padding:24px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+  h1{margin:0px 0px 100px 0px; text-align: center;}
+  label{display:block;font-weight:600;margin-top:12px}
+  input[type=text], select, textarea{width:100%;padding:10px;border-radius:6px;border:1px solid #ccc}
+  .receipts{margin-top:14px}
+  .receipt-row{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+  .receipt-row input{flex:1}
+  .receipt-row .amount{width:180px}
+  .btn{padding:10px 14px;border-radius:8px;border:none;background:#007bff;color:#fff;cursor:pointer}
+  .btn.secondary{background:#6c757d}
+  .small{font-size:13px;color:#666}
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>Laporan Hasil Survey</h1>
+    <h3>Page 1 LHS</h3>
+<div class="page1" style="margin-bottom: 4rem; ">
+    <form method="POST" action="/">
+      <label for="asuransi">Pilih Jenis Asuransi</label>
+      <select id="asuransi" name="asuransi" required>
+        <option value="">-- Pilih Asuransi --</option>
+        <option value="TOB">Asuransi A</option>
+        <option value="SOMPO">Asuransi B</option>
+        <option value="ACA">Asuransi C</option>
+      </select>
+
+      <label for="tertanggung">Nama Tertanggung</label>
+      <input type="text" id="tertanggung" name="tertanggung" required>
+      
+      <label for="polis">Nomor Polis</label>
+      <input type="text" id="polis" name="polis" required>
+
+      <label for="unit">Nomor Polisi / Merk Mobil / Tahun</label>
+      <input type="text" id="unit" name="unit" required>
+
+      <label for="plat">No Pol.</label>
+      <input type="text" id="plat" name="plat" required>
+</div>
+      <h3>CONTENT</h3>
+      <label for="case">Case</label>
+      <select id="case" name="case" required>
+        <option value="">-- Pilih case --</option>
+        <option value="kecelakaan">kecelakaan</option>
+        <option value="kehilangan">kehilangan</option>
+      </select>
+
+      
+      <label for="sta">Nomor Surat Tugas Asuransi</label>
+      <input type="text" id="sta" name="sta" required>
+      
+      <label for="datesta">Tanggal Surat Keluar</label>
+      <input type="date" id="datesta" name="datesta" required>
+      
+      <label for="stksc">Nomor Surat Tugas KSC</label>
+      <input type="text" id="stksc" name="stksc" required>
+      
+      <label for="datestksc">Tanggal surat tugas keluar</label>
+      <input type="date" id="datestksc" name="datestksc">
+      
+      <label for="surveyor">surveyor</label>
+      <select id="surveyor" name="surveyor" required>
+        <option value="">-- Pilih surveyor --</option>
+        <option value="albert">Albertus S.</option>
+        <option value="yulius">Yulius B.</option>
+        <option value="eko">Eko</option>
+        <option value="fredy">Fredy</option>
+        <option value="samino">Samino</option>
+      </select>
+
+      <div style="margin-top:18px">
+        <button type="submit" class="btn">Generate Dokumen (.docx)</button>
+      </div>
+    </form>
+
+  </div>
+
+</body>
+</html>
